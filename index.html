@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internshala Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    <!-- swiper js  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome script  -->
+    <script src="https://kit.fontawesome.com/cc37b302ef.js" crossorigin="anonymous"></script>
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+
+        @media (min-width: 575px) {
+            .swiper-container {
+                padding-left: 26px;
+                padding-right: 26px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .swiper-container {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            .swiper-container {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet {
+            margin: 0 5px;
+            height: 12px;
+            width: 12px;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet-active {
+            width: 30px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body class="relative">
+    <header class="h-[72px] shadow-md mb-0.5 px-4 block">
+        <nav class="relative h-full flex flex-wrap items-center justify-between lg:mx-auto">
+            <div class="flex items-center h-full">
+                <div class="relative mr-4 h-full flex items-center lg:hidden">
+                    <img src="./images//hamburger-menu-key-new.svg" alt="">
+                    <span
+                        class="inline-block absolute left-[17px] top-[26px] h-[7px] w-[7px] rounded-full bg-yellow-400"></span>
+                </div>
+                <a class="cursor-pointer h-full pb-3 lg:pb-2 flex items-center">
+                    <img src="./images/new_internshala_logo.svg" alt="" class="w-[112px]">
+                </a>
+            </div>
+            <div class="group h-full flex items-center relative lg:hidden">
+                <div class="group w-[fit-content] relative">
+                    <button
+                        class="px-[15px] py-[6px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans">
+                        Register
+                        <i class="fa fa-angle-down m-1" aria-hidden="true"></i>
+                    </button>
+                    <ul
+                        class="hidden lg:group-hover:block absolute top-[54px] left-[34px] transform translate-x-[-51%] bg-white text-[14px] font-semibold text-gray-700 py-3 px-4 w-[fit-content] min-w-[10rem] shadow-lg rounded-sm mt-0.5">
+                        <li class="block py-1.5">As a student</li>
+                        <li class="block py-1.5">As an employer</li>
+                    </ul>
+                    <span
+                        class="hidden lg:group-hover:block h-0.5 absolute top-[56px] w-full left-0 bg-[#00A5EC]"></span>
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-1 justify-end items-center">
+                <div class="mx-3 h-full">
+                    <ul class="flex items-center h-full">
+                        <li class="px-3.5 text-[15px] text-gray-600 hover:text-[#008BDC] font-semibold cursor-pointer">
+                            Internships
+                        </li>
+                        <li
+                            class="group relative px-3.5 text-[15px] text-gray-600 hover:text-[#008BDC] font-semibold cursor-pointer">
+                            Online
+                            Trainings <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                            <span
+                                class="hidden lg:group-hover:block h-0.5 absolute top-[46px] w-full left-0 bg-[#00A5EC]"></span>
+                        </li>
+                        <li class="px-3.5 text-[15px] text-gray-600 hover:text-[#008BDC] font-semibold cursor-pointer">
+                            Fresher
+                            Jobs
+                        </li>
+                    </ul>
+                </div>
+                <div class="group w-[fit-content] relative">
+                    <button
+                        class="mx-2 px-[18px] py-[2px] rounded-[3px] inline-block border border-[#00A5EC] hover:border-[#008BDC] text-[#00A5EC] hover:text-[#008BDC] text-base font-semibold leading-7 font-sans">
+                        Login
+                    </button>
+                </div>
+                <div class="group w-[fit-content] relative">
+                    <button
+                        class="mx-2 mr-0 px-[18px] py-[2px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans">
+                        Register
+                        <i class="fa fa-angle-down m-1" aria-hidden="true"></i>
+                    </button>
+                    <ul
+                        class="hidden lg:group-hover:block absolute top-[50px] left-[48px] transform translate-x-[-51%] bg-white text-[14px] font-semibold text-gray-700 py-3 px-4 w-[fit-content] min-w-[10rem] shadow-lg rounded-sm mt-0.5">
+                        <li class="block py-1.5">As a student</li>
+                        <li class="block py-1.5">As an employer</li>
+                    </ul>
+                    <span
+                        class="hidden lg:group-hover:block h-0.5 absolute top-[51px] w-full left-0 bg-[#00A5EC]"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="p-4 md:px-0 md:pt-6 md:pb-4">
+            <div class="w-full md:w-[512px] h-[40px] md:h-12 mx-auto flex flex-row rounded-[4px] overflow-hidden">
+                <input type="text"
+                    class="py-[11px] pr-[11px] pl-[15px] w-full font-semibold focus:outline-none border-t border-l border-b border-gray-200 rounded-[4px]"
+                    placeholder="What are you looking for?">
+                <div class="flex items-center p-3.5 lg:p-4 bg-[#00A5EC]">
+                    <i class="fas fa-search fa-sm text-white" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="banners">
+            <div class="swiper-container px-24 mySwiper">
+                <div class="swiper-wrapper">
+                    <div
+                        class="swiper-slide group mb-4 mt-2 p-4 lg:p-10 shadow hover:shadow-lg rounded-xl bg-slide1 sm:bg-slide1.5 bg-cover bg-center bg-no-repeat !flex flex-col cursor-pointer">
+                        <h2 class="block font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl">Get
+                            ahead. Get an Internship!
+                        </h2>
+                        <p
+                            class="text-[15px] text-gray-500 md:text-gray-700 md:text-[17px] md:font-semibold md:leading-10 lg:hidden">
+                            Appy to
+                            10,000+ internships
+                            <br class="md:hidden">for free
+                        </p>
+                        <div class="mt-3 hidden lg:block">
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 10,000+
+                                Internships with
+                                Stipend
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 100% Verified
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
+                            </p>
+                        </div>
+                        <div class="flex items-end mt-24 lg:mt-16">
+                            <a href=""
+                                class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
+                                Internships</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide group mb-4 mt-2 p-4 lg:p-10 shadow hover:shadow-lg rounded-xl bg-slide1 sm:bg-slide1.5 bg-cover bg-center bg-no-repeat !flex flex-col cursor-pointer">
+                        <h2 class="block font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl">Get
+                            ahead. Get an Internship!
+                        </h2>
+                        <p
+                            class="text-[15px] text-gray-500 md:text-gray-700 md:text-[17px] md:font-semibold md:leading-10 lg:hidden">
+                            Appy to
+                            10,000+ internships
+                            <br class="md:hidden">for free
+                        </p>
+                        <div class="mt-3 hidden lg:block">
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 10,000+
+                                Internships with
+                                Stipend
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 100% Verified
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
+                            </p>
+                        </div>
+                        <div class="flex items-end mt-24 lg:mt-16">
+                            <a href=""
+                                class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
+                                Internships</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide group mb-4 mt-2 p-4 lg:p-10 shadow hover:shadow-lg rounded-xl bg-slide1 sm:bg-slide1.5 bg-cover bg-center bg-no-repeat !flex flex-col cursor-pointer">
+                        <h2 class="block font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl">Get
+                            ahead. Get an Internship!
+                        </h2>
+                        <p
+                            class="text-[15px] text-gray-500 md:text-gray-700 md:text-[17px] md:font-semibold md:leading-10 lg:hidden">
+                            Appy to
+                            10,000+ internships
+                            <br class="md:hidden">for free
+                        </p>
+                        <div class="mt-3 hidden lg:block">
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 10,000+
+                                Internships with
+                                Stipend
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 100% Verified
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
+                            </p>
+                        </div>
+                        <div class="flex items-end mt-24 lg:mt-16">
+                            <a href=""
+                                class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
+                                Internships</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide group mb-4 mt-2 p-4 lg:p-10 shadow hover:shadow-lg rounded-xl bg-slide1 sm:bg-slide1.5 bg-cover bg-center bg-no-repeat !flex flex-col cursor-pointer">
+                        <h2 class="block font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl">Get
+                            ahead. Get an Internship!
+                        </h2>
+                        <p
+                            class="text-[15px] text-gray-500 md:text-gray-700 md:text-[17px] md:font-semibold md:leading-10 lg:hidden">
+                            Appy to
+                            10,000+ internships
+                            <br class="md:hidden">for free
+                        </p>
+                        <div class="mt-3 hidden lg:block">
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 10,000+
+                                Internships with
+                                Stipend
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 100% Verified
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
+                            </p>
+                        </div>
+                        <div class="flex items-end mt-24 lg:mt-16">
+                            <a href=""
+                                class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
+                                Internships</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide group mb-4 mt-2 p-4 lg:p-10 shadow hover:shadow-lg rounded-xl bg-slide1 sm:bg-slide1.5 bg-cover bg-center bg-no-repeat !flex flex-col cursor-pointer">
+                        <h2 class="block font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl">Get
+                            ahead. Get an Internship!
+                        </h2>
+                        <p
+                            class="text-[15px] text-gray-500 md:text-gray-700 md:text-[17px] md:font-semibold md:leading-10 lg:hidden">
+                            Appy to
+                            10,000+ internships
+                            <br class="md:hidden">for free
+                        </p>
+                        <div class="mt-3 hidden lg:block">
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 10,000+
+                                Internships with
+                                Stipend
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 100% Verified
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
+                            </p>
+                        </div>
+                        <div class="flex items-end mt-24 lg:mt-16">
+                            <a href=""
+                                class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
+                                Internships</a>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide group mb-4 mt-2 p-4 lg:p-10 shadow hover:shadow-lg rounded-xl bg-slide1 sm:bg-slide1.5 bg-cover bg-center bg-no-repeat !flex flex-col cursor-pointer">
+                        <h2 class="block font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl">Get
+                            ahead. Get an Internship!
+                        </h2>
+                        <p
+                            class="text-[15px] text-gray-500 md:text-gray-700 md:text-[17px] md:font-semibold md:leading-10 lg:hidden">
+                            Appy to
+                            10,000+ internships
+                            <br class="md:hidden">for free
+                        </p>
+                        <div class="mt-3 hidden lg:block">
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 10,000+
+                                Internships with
+                                Stipend
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> 100% Verified
+                            </p>
+                            <p class="text-xl font-medium text-gray-600 py-2"><i
+                                    class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
+                            </p>
+                        </div>
+                        <div class="flex items-end mt-24 lg:mt-16">
+                            <a href=""
+                                class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
+                                Internships</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full relative flex justify-center">
+                <div class="swiper-pagination mx-auto"></div>
+            </div>
+        </div>
+
+        <div class="internship-city px-5">
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold text-center tracking-wide md:text-[28px] md:leading-8 lg:text-left">
+                    Internships</h2>
+                <p class="flex justify-center lg:justify-between text-base leading-6 mt-3 text-[#484848] font-normal">
+                    Apply to 10,000+ internships for free
+                    <a href="" class="hidden lg:flex items-center text-[#00A5EC] hover:text-[#008BDC] font-semibold">
+                        View all Internships <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </p>
+                <div class="my-6 md:my-8">
+                    <h4
+                        class="text-gray-600 md:text-black text-[13px] md:text-lg font-semibold leading-6 uppercase md:normal-case text-center lg:text-left">
+                        Popular
+                        Cities</h4>
+                    <div class="overflow-x-auto overflow-y-visible flex flex-row mt-4" id="popular_cities">
+                        <script>
+                            const cities = [{ name: "Work from home", image: "./images/work_from_home.svg" }, { name: "Delhi/NCR", image: "./images/delhi_ncr.svg" }, { name: "Bangalore", image: "./images/bangalore.svg" }, { name: "Mumbai", image: "./images/mumbai.svg" }, { name: "Hyderabad", image: "./images/hyderabad.svg" }, { name: "Chennai", image: "./images/chennai.svg" }, { name: "Kolkata", image: "./images/kolkata.svg" }, { name: "International", image: "./images/international.svg" }]
+                            for (let i = 0; i < cities.length; i++) {
+                                var box = document.createElement('a');
+                                box.className = "flex-shrink-0 flex flex-col w-[140px] px-1 py-4 pb-6 my-[10px] mr-[14px] ml-[1px] border border-gray-300 hover:shadow-md rounded-md cursor-pointer"
+                                box.id = "city" + i
+                                document.getElementById('popular_cities').appendChild(box);
+                                var num = i.toString();
+                                var id = "city" + num;
+                                document.getElementById(id).innerHTML = `<img src=${cities[i].image} alt="" class="w-[132px]">
+                            <div class="mt-4 text-sm md:text-base text-center font-semibold block">${cities[i].name}</div>`
+                            }
+                        </script>
+                    </div>
+                </div>
+                <div class="my-6 md:my-8">
+                    <h4
+                        class="text-gray-600 md:text-black text-[13px] md:text-lg font-semibold leading-6 uppercase md:normal-case text-center lg:text-left">
+                        Popular
+                        Categories</h4>
+                    <div class="overflow-x-auto overflow-y-visible flex flex-row mt-4" id="popular_categories">
+                        <script>
+                            const categories = [{ name: "Part-time", image: "./images/part_time.svg" }, { name: "Engineering", image: "./images/engineering.svg" }, { name: "NGO", image: "./images/ngo.svg" }, { name: "MBA", image: "./images/mba.svg" }, { name: "Design", image: "./images/design.svg" }, { name: "Science", image: "./images/science.svg" }, { name: "Media", image: "./images/media.svg" }, { name: "Humanities", image: "./images/humanities.svg" }]
+                            for (let i = 0; i < categories.length; i++) {
+                                var box_category = document.createElement('a');
+                                box_category.className = "flex-shrink-0 flex flex-col w-[140px] px-1 py-4 pb-6 my-[10px] mr-[14px] ml-[1px] border border-gray-300 hover:shadow-md rounded-md cursor-pointer"
+                                box_category.id = "category_items" + i
+                                document.getElementById('popular_categories').appendChild(box_category);
+                                var num = i.toString();
+                                var id = "category_items" + num;
+                                document.getElementById(id).innerHTML = `<img src=${categories[i].image} alt="" class="w-[132px]">
+                            <div class="mt-4 text-sm md:text-base text-center font-semibold block">${categories[i].name}</div>`
+                            }
+                        </script>
+                    </div>
+                </div>
+                <div class="my-6 md:my-8 flex justify-center lg:hidden">
+                    <a href=""
+                        class="w-[fit-content] text-base font-semibold tracking-wide text-[#00A5EC] hover:text-[#008BDC] flex justify-center items-center">
+                        View all internships
+                        <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 py-6">
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold text-center tracking-wide md:text-[28px] md:leading-8 lg:text-left">
+                    Internshala Trainings</h2>
+                <p class="flex justify-center lg:justify-between text-base leading-6 mt-3 text-[#484848] font-normal">
+                    Learn new-age skills on the go
+                    <a href="" class="hidden lg:flex items-center text-[#00A5EC] hover:text-[#008BDC] font-semibold">
+                        View all Trainings <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </p>
+                <div class="my-6 md:my-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 max-w-xs md:max-w-xl lg:max-w-full gap-x-[2px] gap-y-2 mx-auto lg:overflow-x-auto lg:overflow-y-visible lg:flex lg:flex-row mt-4"
+                        id="popular_training">
+                        <script>
+                            const training = [{ name: "Programming with Python", image: "./images/programming_with_python.svg" }, { name: "Digital Marketing", image: "./images/digital_marketing.svg" }, { name: "Web Development", image: "./images/web_development.svg" }, { name: "Machine Learning", image: "./images/machine_learning.svg" }, { name: "Advanced Excel", image: "./images/advanced_excel.svg" }, { name: "Ethical Hacking", image: "./images/ethical_hacking.svg" }, { name: "AutoCAD", image: "./images/autocad.svg" }, { name: "Creative Writing", image: "./images/creative_writing.svg" }]
+                            for (let i = 0; i < training.length; i++) {
+                                var box = document.createElement('a');
+                                box.className = "flex-shrink-0 flex flex-col w-[140px] px-2.5 py-4 pb-6 my-[10px] mr-[14px] ml-[1px] border md:border-0 border-gray-300 hover:shadow-md rounded-md cursor-pointer"
+                                box.id = "training_items" + i
+                                document.getElementById('popular_training').appendChild(box);
+                                var num = i.toString();
+                                var id = "training_items" + num;
+                                document.getElementById(id).innerHTML = `<img src=${training[i].image} alt="" class="w-[132px]">
+                                <div class="mt-4 text-sm md:text-base text-center font-semibold block">${training[i].name}</div>`
+                            }
+                        </script>
+                    </div>
+                    <div class="my-6">
+                        <p class="text-center text-gray-500 text-[15px]">& 52 more...</p>
+                    </div>
+                </div>
+                <div class="my-6 md:my-8 flex justify-center lg:hidden">
+                    <a href=""
+                        class="w-[fit-content] text-base font-semibold tracking-wide text-[#00A5EC] hover:text-[#008BDC] flex justify-center items-center">
+                        View all internships
+                        <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-10 px-3 pt-6 pb-4 bg-gray-800 relative bottom-0 w-full overflow-hidden">
+        <div class="">
+            <ul class="text-gray-200 text-[15px] font-medium">
+                <li class="py-1.5">About us</li>
+                <li class="py-1.5">We're hiring</li>
+                <li class="py-1.5">Hire interns for your company</li>
+                <li class="py-1.5">Team Diary</li>
+                <li class="py-1.5">Blog</li>
+                <li class="py-1.5">Our Services</li>
+                <li class="py-1.5">Terms & Conditions</li>
+                <li class="py-1.5">Privacy</li>
+                <li class="py-1.5">Contact us</li>
+            </ul>
+        </div>
+        <div class="flex flex-wrap lg:pb-5">
+            <div class="w-full border-b border-gray-300 my-4"></div>
+            <div class="text-white flex-shrink-0 w-full flex justify-between items-center">
+                <div class="list-none lg:flex hidden">
+                    <li class="py-2 px-3 mx-1 rounded-md"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                    </li>
+                    <li class="py-2 px-3 mx-1 rounded-md"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </li>
+                    <li class="py-2 px-3 mx-1 rounded-md"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
+                    </li>
+                    <li class="py-2 px-3 mx-1 rounded-md"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </li>
+                </div>
+                <div class="">© Copyright 2021 Internshala</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- swiper js script  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            centeredSlides: true,
+            loop: true,
+            autoplay: true,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+        });
+    </script>
+</body>
+
+</html>
