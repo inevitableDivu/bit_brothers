@@ -85,7 +85,7 @@
                 <div class="group w-[fit-content] relative">
                     <button
                         class="px-[15px] py-[6px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans"
-                        onclick="document.getElementById('mobile_register_menu').classList.toggle('hidden')">
+                        onclick="document.getElementById('mobile_register_menu').classList.toggle('hidden'); document.getElementById('mobile_register_border').classList.toggle('hidden')">
                         Register
                         <i class="fa fa-angle-down m-1" aria-hidden="true"></i>
                     </button>
@@ -94,7 +94,7 @@
                         <li class="block py-1.5">As a student</li>
                         <li class="block py-1.5">As an employer</li>
                     </ul>
-                    <span
+                    <span id="mobile_register_border"
                         class="hidden lg:group-hover:block h-0.5 absolute top-[56px] w-full left-0 bg-[#00A5EC]"></span>
                 </div>
             </div>
