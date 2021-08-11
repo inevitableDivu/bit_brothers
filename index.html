@@ -84,11 +84,12 @@
             <div class="group h-full flex items-center relative lg:hidden">
                 <div class="group w-[fit-content] relative">
                     <button
-                        class="px-[15px] py-[6px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans">
+                        class="px-[15px] py-[6px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans"
+                        onclick="document.getElementById('mobile_register_menu').classList.toggle('hidden')">
                         Register
                         <i class="fa fa-angle-down m-1" aria-hidden="true"></i>
                     </button>
-                    <ul
+                    <ul id="mobile_register_menu"
                         class="hidden lg:group-hover:block absolute top-[54px] left-[34px] transform translate-x-[-51%] bg-white text-[14px] font-semibold text-gray-700 py-3 px-4 w-[fit-content] min-w-[10rem] shadow-lg rounded-sm mt-0.5">
                         <li class="block py-1.5">As a student</li>
                         <li class="block py-1.5">As an employer</li>
