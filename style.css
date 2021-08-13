@@ -859,6 +859,9 @@ video {
 .gap-y-2 {
 	row-gap: 0.5rem;
 }
+.overflow-y-scroll {
+	overflow-y: scroll;
+}
 .overflow-hidden {
 	overflow: hidden;
 }
@@ -1151,6 +1154,10 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(0, 165, 236, var(--tw-text-opacity));
 }
+.text-black {
+	--tw-text-opacity: 1;
+	color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
 .text-gray-300 {
 	--tw-text-opacity: 1;
 	color: rgba(209, 213, 219, var(--tw-text-opacity));
@@ -1171,14 +1178,6 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(229, 231, 235, var(--tw-text-opacity));
 }
-.text-gray-800 {
-	--tw-text-opacity: 1;
-	color: rgba(31, 41, 55, var(--tw-text-opacity));
-}
-.text-black {
-	--tw-text-opacity: 1;
-	color: rgba(0, 0, 0, var(--tw-text-opacity));
-}
 .shadow-md {
 	--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1192,7 +1191,7 @@ video {
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#popular_categories::-webkit-scrollbar, #popular_cities::-webkit-scrollbar, #popular_training::-webkit-scrollbar{
+#popular_categories::-webkit-scrollbar, #popular_cities::-webkit-scrollbar, #popular_training::-webkit-scrollbar, #sideMenu::-webkit-scrollbar{
     display: none;
     -ms-overflow-style: none;
 }

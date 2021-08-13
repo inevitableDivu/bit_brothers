@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#popular_categories::-webkit-scrollbar, #popular_cities::-webkit-scrollbar, #popular_training::-webkit-scrollbar{
+#popular_categories::-webkit-scrollbar, #popular_cities::-webkit-scrollbar, #popular_training::-webkit-scrollbar, #sideMenu::-webkit-scrollbar{
     display: none;
     -ms-overflow-style: none;
 }
