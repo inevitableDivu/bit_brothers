@@ -6,3 +6,20 @@
     display: none;
     -ms-overflow-style: none;
 }
+.sidebar .overlay{
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+.sidebar .overlay.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 500;
+}
+.sidebar .sideMenu{
+    left: -100%;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+.sidebar .sideMenu.open{
+    left: 0;
+}

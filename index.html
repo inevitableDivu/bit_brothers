@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internshala Clone</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
 
     <!-- swiper js  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -15,7 +14,7 @@
 
     <!-- font awesome script  -->
     <script src="https://kit.fontawesome.com/cc37b302ef.js" crossorigin="anonymous"></script>
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="./index.js"></script>
     <style>
         .swiper-container {
             width: 100%;
@@ -45,8 +44,8 @@
         @media (min-width: 1024px) {
 
             .swiper-container {
-                padding-left: 100px;
-                padding-right: 100px;
+                padding-left: 150px;
+                padding-right: 150px;
             }
         }
 
@@ -73,7 +72,7 @@
         <nav class="relative h-full flex flex-wrap items-center justify-between lg:mx-auto max-w-6xl">
             <div class="flex items-center h-full">
                 <div class="relative mr-4 h-full flex items-center lg:hidden">
-                    <img src="./images//hamburger-menu-key-new.svg" alt="">
+                    <img src="./images//hamburger-menu-key-new.svg" class="cursor-pointer" onclick="sideMenuOpen()">
                     <span
                         class="inline-block absolute left-[17px] top-[26px] h-[7px] w-[7px] rounded-full bg-yellow-400"></span>
                 </div>
@@ -84,7 +83,7 @@
             <div class="group h-full flex items-center relative lg:hidden">
                 <div class="group w-[fit-content] relative">
                     <button
-                        class="px-[15px] py-[6px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans"
+                        class="px-[15px] py-[6px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-[15px] font-semibold leading-7 font-sans"
                         onclick="document.getElementById('mobile_register_menu').classList.toggle('hidden'); document.getElementById('mobile_register_border').classList.toggle('hidden')">
                         Register
                         <i class="fa fa-angle-down m-1" aria-hidden="true"></i>
@@ -102,12 +101,14 @@
                 <div class="mx-3 h-full">
                     <ul class="flex items-center h-full">
                         <li class="px-3.5 text-[15px] text-gray-600 hover:text-[#008BDC] font-semibold cursor-pointer">
-                            Internships
+                            Internships <i class="fa fa-angle-down ml-1.5" aria-hidden="true"></i>
                         </li>
                         <li
                             class="group relative px-3.5 text-[15px] text-gray-600 hover:text-[#008BDC] font-semibold cursor-pointer">
                             Online
-                            Trainings <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                            Trainings <span
+                                class="uppercase py-0.5 px-2 mx-1.5 text-xs bg-yellow-500 text-white font-semibold rounded-[4px]">75%
+                                off</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
                             <span
                                 class="hidden lg:group-hover:block h-0.5 absolute top-[46px] w-full left-0 bg-[#00A5EC]"></span>
                         </li>
@@ -123,7 +124,7 @@
                         Login
                     </button>
                 </div>
-                <div class="group w-[fit-content] relative ml-4 mr-0">
+                <div class="group w-[fit-content] relative ml-2">
                     <button
                         class="px-[18px] py-[2px] rounded-[3px] inline-block bg-[#00A5EC] hover:bg-[#008BDC] text-white text-base font-semibold leading-7 font-sans">
                         Register
@@ -139,6 +140,41 @@
                 </div>
             </div>
         </nav>
+        <section class="sidebar">
+            <div id="overlay"
+                class="overlay fixed top-0 left-0 right-0 bottom-0 h-full w-full bg-black bg-opacity-[0.4] z-20"
+                onclick="sideMenuClose()">
+            </div>
+            <div id="sideMenu" class="sideMenu fixed top-0 z-[600] !max-w-[320px] bg-white h-screen w-[90vw] pt-6">
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Internships</a>
+                </div>
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Online Trainings<span
+                            class="uppercase py-0.5 px-2 mx-1.5 text-xs bg-yellow-500 text-white font-semibold rounded-[4px]">75%
+                            off</span></a>
+                </div>
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">WFH
+                        Internships</a>
+                </div>
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Fresher Jobs</a>
+                </div>
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Contact us</a>
+                </div>
+                <hr class="h-[1px] text-gray-300 w-full my-3">
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Register - As a
+                        Student</a></div>
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Register - As a
+                        Employer</a></div>
+                <div class="flex items-center"><a href="#"
+                        class="font-semibold p-2.5 tracking-wide text-[14.5px] pl-5 text-gray-600">Login</a></div>
+            </div>
+        </section>
     </header>
 
     <section class="content">
@@ -180,7 +216,7 @@
                                     class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
                             </p>
                         </div>
-                        <div class="flex items-end mt-16 sm:mt-20 lg:mt-16">
+                        <div class="flex items-end mt-16 sm:mt-20 md:mt-28 lg:mt-16">
                             <a href=""
                                 class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
                                 Internships</a>
@@ -210,7 +246,7 @@
                                     class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
                             </p>
                         </div>
-                        <div class="flex items-end mt-16 sm:mt-20 lg:mt-16">
+                        <div class="flex items-end mt-16 sm:mt-20 md:mt-28 lg:mt-16">
                             <a href=""
                                 class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
                                 Internships</a>
@@ -240,7 +276,7 @@
                                     class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
                             </p>
                         </div>
-                        <div class="flex items-end mt-16 sm:mt-20 lg:mt-16">
+                        <div class="flex items-end mt-16 sm:mt-20 md:mt-28 lg:mt-16">
                             <a href=""
                                 class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
                                 Internships</a>
@@ -270,7 +306,7 @@
                                     class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
                             </p>
                         </div>
-                        <div class="flex items-end mt-16 sm:mt-20 lg:mt-16">
+                        <div class="flex items-end mt-16 sm:mt-20 md:mt-28 lg:mt-16">
                             <a href=""
                                 class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
                                 Internships</a>
@@ -300,7 +336,7 @@
                                     class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
                             </p>
                         </div>
-                        <div class="flex items-end mt-16 sm:mt-20 lg:mt-16">
+                        <div class="flex items-end mt-16 sm:mt-20 md:mt-28 lg:mt-16">
                             <a href=""
                                 class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
                                 Internships</a>
@@ -330,7 +366,7 @@
                                     class="fa fa-check fa-lg text-green-600 mr-2" aria-hidden="true"></i> Apply for free
                             </p>
                         </div>
-                        <div class="flex items-end mt-16 sm:mt-20 lg:mt-16">
+                        <div class="flex items-end mt-16 sm:mt-20 md:mt-28 lg:mt-16">
                             <a href=""
                                 class="text-[#00A5EC] text-sm lg:text-base font-semibold group-hover:text-[#008BDC]">View
                                 Internships</a>
@@ -347,7 +383,8 @@
             <div class="mt-12">
                 <h2 class="text-2xl font-bold text-center tracking-wide md:text-[28px] md:leading-8 lg:text-left">
                     Internships</h2>
-                <p class="flex justify-center lg:justify-between text-base leading-6 mt-3 text-[#484848] font-normal">
+                <p
+                    class="flex justify-center lg:justify-between text-base leading-6 mt-3 text-[#484848] font-medium lg:text-lg">
                     Apply to 10,000+ internships for free
                     <a href="" class="hidden lg:flex items-center text-[#00A5EC] hover:text-[#008BDC] font-semibold">
                         View all Internships <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
@@ -407,9 +444,11 @@
 
         <div class="px-4 py-6 max-w-7xl mx-auto">
             <div class="mt-12">
-                <h2 class="text-2xl font-bold text-center tracking-wide md:text-[28px] md:leading-8 lg:text-left">
-                    Internshala Trainings</h2>
-                <p class="flex justify-center lg:justify-between text-base leading-6 mt-3 text-[#484848] font-normal">
+                <h2 class="text-2xl font-bold text-center md:text-[28px] md:leading-8 lg:text-left">
+                    Internshala Trainings <img src="./images/tag75-1920.webp" class="inline-block ml-2 w-20" alt="">
+                </h2>
+                <p
+                    class="flex justify-center lg:justify-between text-base lg:text-lg leading-6 mt-3 text-[#484848] font-medium">
                     Learn new-age skills on the go
                     <a href="" class="hidden lg:flex items-center text-[#00A5EC] hover:text-[#008BDC] font-semibold">
                         View all Trainings <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
@@ -433,7 +472,7 @@
                         </script>
                     </div>
                     <div class="my-6">
-                        <p class="text-center text-gray-500 text-[15px]">& 52 more...</p>
+                        <p class="text-center text-gray-500 text-[15px] font-medium">& 52 more...</p>
                     </div>
                 </div>
                 <div class="my-6 md:my-8 flex justify-center lg:hidden">
@@ -488,7 +527,7 @@
 
         const space = () => {
             if (window.innerWidth >= 768) {
-                return 40
+                return 30
             } else {
                 return 10
             }
